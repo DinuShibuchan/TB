@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Travel Planner</title>
+    <style>
+        body {font-family: system-ui, sans-serif; margin: 2rem;}
+        .box {max-width: 600px; margin: auto;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>AI Travel Planner</h1>
+        <p>The back‑end API is running. Try the health endpoint:</p>
+        <pre id="out">Loading…</pre>
+    </div>
+    <script>
+        fetch("/health")
+            .then(r => r.json())
+            .then(d => document.getElementById("out").textContent = JSON.stringify(d, null, 2))
+            .catch(e => document.getElementById("out").textContent = "Error: " + e);
+    </script>
+</body>
+</html>

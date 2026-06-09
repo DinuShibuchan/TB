@@ -1,11 +1,14 @@
 import os
 from fastapi import FastAPI
 from dotenv import load_dotenv
+from fastapi.staticfiles import StaticFiles
 
-# Load .env variables (optional for local dev)
 load_dotenv()
 
 app = FastAPI(title="AI Travel Planner")
+
+# Serve static files (index.html etc.)
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 @app.get("/health")
 def health_check():
