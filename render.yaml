@@ -23,6 +23,6 @@ services:
       - key: OLLAMA_MODEL
         value: mistral
       - key: RENDER
-        value: "true"
+        value: true
       - key: PYTHONPATH
         value: .
