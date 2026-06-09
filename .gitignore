@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+
+# Local databases
+*.db
+travel_planner.db
+
+# Environments & Secrets
+.env
+
+# Javascript / Node
+node_modules/
+npm-debug.log*
+
+# Editors & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Scratch script directories
+scratch/

@@ -1,0 +1,16 @@
+{
+  "name": "ai-travel-planner",
+  "version": "1.0.0",
+  "description": "AI Travel Planner Backend & Frontend Package",
+  "scripts": {
+    "start": "python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000"
+  },
+  "keywords": [
+    "fastapi",
+    "ollama",
+    "rag",
+    "pgvector"
+  ],
+  "author": "AI Systems Architect",
+  "license": "ISC"
+}

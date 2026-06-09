@@ -1,0 +1,24 @@
+databases:
+  - name: travel-planner-db
+    databaseName: travel_planner
+    user: postgres
+    plan: free
+
+services:
+  - type: web
+    name: ai-travel-planner
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: travel-planner-db
+          property: connectionString
+      - key: OPENWEATHER_API_KEY
+        value: dummy
+      - key: OLLAMA_BASE_URL
+        value: http://localhost:11434
+      - key: OLLAMA_MODEL
+        value: mistral
