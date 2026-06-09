@@ -22,3 +22,5 @@ services:
         value: http://localhost:11434
       - key: OLLAMA_MODEL
         value: mistral
+      - key: PYTHONPATH
+        value: .
